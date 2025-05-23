@@ -1,0 +1,32 @@
+[tool.poetry]
+package-mode = false
+name = "ai-agents"
+version = "0.1.0"
+description = "Interactive notebooks exploring React Agent and Planner & Execute patterns"
+authors = ["Nicolò Calcagno <nicolo.calcagno@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+marimo = "^0.13.11"
+langchain-core = "^0.3.60"
+langchain-openai = "^0.3.17"
+langgraph = "^0.4.5"
+python-dotenv = "^1.1.0"
+langchain-mistralai = "^0.2.10"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.0.0"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py311']
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = ["E203", "W503"]
