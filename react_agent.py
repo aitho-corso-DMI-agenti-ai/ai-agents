@@ -164,8 +164,10 @@ def _(mo):
 
 @app.cell
 def _(os):
-    if "MISTRAL_API_KEY" not in os.environ:
-        os.environ["MISTRAL_API_KEY"] = "p1VjvflfWgojRhjAsT670fjb2tO9myNy"
+    import getpass
+
+    if not os.environ.get("MISTRAL_API_KEY"):
+        os.environ["MISTRAL_API_KEY"] = getpass.getpass()
     return
 
 
