@@ -26,17 +26,11 @@ def _(mo):
 
 @app.cell
 def _():
-    import json
-    from typing import Dict, List, Any, Optional
     from datetime import datetime
     import os
-    import asyncio
     from langchain_core.tools import tool
-    from langchain_openai import ChatOpenAI
     from langgraph.prebuilt import create_react_agent
-    from dotenv import load_dotenv
 
-    load_dotenv()
     return create_react_agent, datetime, os, tool
 
 
@@ -185,7 +179,7 @@ def _():
 
 @app.cell
 def _():
-    SYS_PROMPT = "sei un agente esperto in matematica"
+    SYS_PROMPT = "sei un agente esperto multifunzione"
     return (SYS_PROMPT,)
 
 
@@ -205,7 +199,7 @@ def _(SYS_PROMPT, available_tools, create_react_agent, mistral_chat_model):
 @app.cell
 def _(agent):
     agent.invoke(
-        {"messages": [{"role": "user", "content": "quanto fa 1+1"}]}
+        {"messages": [{"role": "user", "content": "qual'è il meteo di catania? e dimmi che ore sono"}]}
     )
     return
 
@@ -213,7 +207,7 @@ def _(agent):
 @app.cell
 def _(agent):
     agent.invoke(
-        {"messages": [{"role": "user", "content": "qual'è il meteo di catania? e dimmi che ore sono"}]}
+        {"messages": [{"role": "user", "content": "Dimmi il meteo di Catania e Milano, poi calcola la differenza tra le temperature."}]}
     )
     return
 
