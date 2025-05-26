@@ -1,12 +1,11 @@
 # Corso Aitho-DMI 
 # Agenti Intelligenti e Machine Learning - AI Agents
 
-Una collezione di notebook interattivi creati con [marimo](https://marimo.io/) per esplorare React Agent e Planner & Execute patterns.
+Una collezione di notebook interattivi creati con [marimo](https://marimo.io/) per esplorare React Agent.
 
 ## 📋 Contenuti
 
 - `react_agent.py` - Implementazione e sperimentazione con React Agent pattern
-- `planner_execute.py` - Implementazione e sperimentazione con Planner & Execute pattern
 
 ## 🚀 Setup e Installazione
 
